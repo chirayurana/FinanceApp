@@ -25,6 +25,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.chirayu.financeapp.screens.Expenses
+import com.chirayu.financeapp.screens.Settings
 import com.chirayu.financeapp.ui.theme.FinanceAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val backStackEntry = navController.currentBackStackEntryAsState()
                 Scaffold(
+
                     bottomBar = {
 
                             NavigationBar {
@@ -113,7 +116,7 @@ class MainActivity : ComponentActivity() {
                                         .fillMaxSize()
                                         .padding(innerPadding),
                                 ) {
-                                    Greeting(name = "Expenses")
+                                    Expenses(navController)
                                 }
                             }
                             composable("reports") {
@@ -140,7 +143,7 @@ class MainActivity : ComponentActivity() {
                                         .fillMaxSize()
                                         .padding(innerPadding),
                                 ) {
-                                    Greeting(name = "Settings")
+                                    Settings(navController)
                                 }
                             }
                             composable("settings/categories") {
