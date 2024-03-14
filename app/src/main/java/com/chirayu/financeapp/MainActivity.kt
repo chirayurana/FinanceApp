@@ -25,7 +25,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.chirayu.financeapp.screens.Add
 import com.chirayu.financeapp.screens.Expenses
+import com.chirayu.financeapp.screens.Reports
 import com.chirayu.financeapp.screens.Settings
 import com.chirayu.financeapp.ui.theme.FinanceAppTheme
 
@@ -91,7 +93,7 @@ class MainActivity : ComponentActivity() {
                                     }
                                 )
                                 NavigationBarItem(
-                                    selected = backStackEntry?.value?.destination?.route == "settings",
+                                    selected = backStackEntry?.value?.destination?.route?.startsWith("settings")?:false,
                                     onClick = { navController.navigate("settings") },
                                     label = {
                                         Text("Settings")
@@ -125,7 +127,7 @@ class MainActivity : ComponentActivity() {
                                         .fillMaxSize()
                                         .padding(innerPadding),
                                 ) {
-                                    Greeting(name = "Reports")
+                                    Reports(navController)
                                 }
                             }
                             composable("add") {
@@ -134,7 +136,7 @@ class MainActivity : ComponentActivity() {
                                         .fillMaxSize()
                                         .padding(innerPadding),
                                 ) {
-                                    Greeting(name = "Add")
+                                    Add(navController)
                                 }
                             }
                             composable("settings") {
