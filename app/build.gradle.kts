@@ -50,8 +50,12 @@ android {
 }
 
 dependencies {
+    //Adding navigation dependency
     val nav_version = "2.7.7"
     implementation("androidx.navigation:navigation-compose:$nav_version")
+    //Adding custom date time picker
+    implementation ("com.marosseleng.android:compose-material3-datetime-pickers:0.6.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
