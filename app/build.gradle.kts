@@ -55,6 +55,9 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:$nav_version")
     //Adding custom date time picker
     implementation ("com.marosseleng.android:compose-material3-datetime-pickers:0.6.0")
+    //Adding Color picker
+    implementation("com.github.skydoves:colorpicker-compose:1.0.7")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

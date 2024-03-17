@@ -62,6 +62,7 @@ class AddViewModel: ViewModel()
 
     fun submitExpenses(){
         //TODO: Save to Database
+        
 
     }
 }

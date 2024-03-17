@@ -26,6 +26,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.chirayu.financeapp.screens.Add
+import com.chirayu.financeapp.screens.Categories
 import com.chirayu.financeapp.screens.Expenses
 import com.chirayu.financeapp.screens.Reports
 import com.chirayu.financeapp.screens.Settings
@@ -154,7 +155,7 @@ class MainActivity : ComponentActivity() {
                                         .fillMaxSize()
                                         .padding(innerPadding),
                                 ) {
-                                    Greeting(name = "Categories")
+                                    Categories(navController)
                                 }
                             }
                         }
